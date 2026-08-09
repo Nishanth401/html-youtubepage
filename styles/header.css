@@ -58,6 +58,11 @@
   width: 40px;
 }
 
+.search-button,
+.voice-button {
+  position: relative;
+}
+
 .search-button{
   height: 39px;
   width: 66px;
@@ -66,7 +71,29 @@
   border-style: solid;
   border-color: rgb(192, 192, 192) ;
   margin-left: -1px;
+
+  position: relative;
+
  
+}
+.search-button .tool-tips,
+.voice-button .tool-tips{
+  position: absolute;
+  background-color: gray;
+  color: white;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 2px;
+  font-size: 12px;
+  bottom: -30;
+  opacity: 0;
+  transition: opacity 0.15;
+  pointer-events: none;
+}
+.search-button:hover .tool-tips{
+  opacity: 1;
 }
 
 .search-bar{
